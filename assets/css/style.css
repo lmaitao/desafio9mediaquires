@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-areas: 
+        "nav"
+        "filtro"
+        "galeria "
+        "paginas"
+        "footer";
+    grid-template-rows: 1fr 1fr 4fr 1fr 1fr;
+    height: 100vh;
+}
+
+nav {
+    background-color:#06418f;
+    grid-area: nav;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.categorias {
+    display: none;
+}
+
+.nav-bar .logo {
+    display: flex;
+    gap: 15px;
+}
+
+.contenedor1 {
+    background-color: #e3e5e2;
+    grid-area: filtro;
+    text-align: center;
+}
+
+.filtro p {
+    padding: 10px;
+}
+
+.filtro select{
+  border-radius: 5px;
+  border-width: 2px;
+  width: 50%;
+}
+
+main {
+    grid-area: galeria;
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow-y: scroll;
+    background-color: rgb(247, 247, 228);
+}
+
+.tarjeta {
+    border: solid 4px black;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tarjeta img {
+    width: 300px;
+}
+
+.tarjeta button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.tarjeta button:hover {
+  opacity: 0.7;
+}
+
+.paginas {
+    grid-area: paginas;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: blue;
+}
+
+.pestañas {
+    display: flex;
+    padding: 0px 80px;
+    list-style: none;
+}
+
+.pestañas li {
+    border: solid 1px silver;
+    height: 30px;
+    width: 40px;
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    background-color: #4f71a3;
+    grid-area: footer;
+    color: white;
+}
+
+.container_pie_de_pagina {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.container_pie_de_pagina  .logo {
+    display: flex;
+    gap: 20px;
+    font-size: 24px;
+}
+
+@media (min-width: 576px) {
+    body {
+        background-color: white;
+        grid-template-areas: 
+            "nav filtro filtro"
+            "nav galeria galeria "
+            "footer paginas paginas ";
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        height: 100vh;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-bar {
+        align-items: start;
+        padding: 20px 20px;
+        font-size: 15px;
+        display: inline-block;
+    }
+
+    .icono {
+        display: none;
+    }
+
+    .categorias, li{
+        display: flex;
+        list-style-type: none;
+        flex-direction: column;
+        margin: 40px 15px;
+        font-size: 15px;
+    }
+
+    .tarjeta img {
+        width: 300px;
+    }
+
+    .pestañas li {
+        margin: auto;
+    }
+  }
+
+  @media (min-width: 948px) {
+    body {
+        background-color: white;
+        grid-template-areas: 
+            "nav filtro filtro"
+            "nav galeria galeria "
+            "footer paginas paginas ";
+        grid-template-columns: 1fr 8fr;
+        grid-template-rows: 1fr 10fr  1fr ;
+        height: 100vh;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr;
+        overflow: scroll;
+    }
+
+    .nav-bar {
+        align-items: start;
+        padding: 20px 20px;
+        font-size: 15px;
+        display: inline-block;
+    }
+
+    .icono {
+        display: none;
+    }
+
+    .categorias, li{
+        display: flex;
+        list-style-type: none;
+        flex-direction: column;
+        margin: 40px 15px;
+        font-size: 15px;
+    }
+
+    .tarjeta img {
+        width: 300px;
+    }
+
+    .pestañas li {
+        margin: auto;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    body {
+        background-color: white;
+        grid-template-areas: 
+            "nav filtro filtro"
+            "nav galeria galeria "
+            "footer paginas paginas ";
+        grid-template-columns: 1fr 8fr;
+        grid-template-rows: 1fr 10fr  1fr ;
+        height: 100vh;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr 1fr;
+        overflow: scroll;
+    }
+
+    .nav-bar {
+        align-items: start;
+        padding: 20px 20px;
+        font-size: 15px;
+        display: inline-block;
+    }
+
+    .icono {
+        display: none;
+    }
+
+    .categorias, li{
+        display: flex;
+        list-style-type: none;
+        flex-direction: column;
+        margin: 40px 15px;
+        font-size: 15px;
+    }
+
+    .tarjeta img {
+        width: 300px;
+    }
+
+    .pestañas li {
+        margin: auto;
+    }
+  }
